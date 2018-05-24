@@ -1,7 +1,5 @@
 ﻿using System.Data.Entity;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using MovieRentalApp.Models;
 using MovieRentalApp.ViewModels;
@@ -45,7 +43,8 @@ namespace MovieRentalApp.Controllers
             var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel()
             {
-                MembershipTypes = membershipTypes
+                MembershipTypes = membershipTypes,
+                Customer = new Customer() //add this line, otherwise the new customer's id would be null, hence model validation would fail in Save action
             };
 
             return View("CustomerForm", viewModel);
@@ -57,13 +56,13 @@ namespace MovieRentalApp.Controllers
         {
             //validation:
             if (!ModelState.IsValid)
-            {
+            {              
                 var vm = new CustomerFormViewModel()
                 {
                     Customer = customer,
                     MembershipTypes = _context.MembershipTypes.ToList()
                 };
-                return View("CustomerForm", vm);
+                return View("CustomerForm", vm);               
             }
 
             //based on if the customer has an id or not, we will decide if this is a new customer or an existing customer

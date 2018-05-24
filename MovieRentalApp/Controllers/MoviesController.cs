@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using MovieRentalApp.Models;
@@ -54,7 +52,8 @@ namespace MovieRentalApp.Controllers
             var genres = _context.Genres.ToList();
             MovieFormViewModel vm = new MovieFormViewModel
             {
-                Genres = genres
+                Genres = genres,
+                Movie = new Movie()//this will create the Movie object with id set to 0 instead of null; otherwise validation would fail in Save action
             };
 
             return View("MovieForm",vm);
