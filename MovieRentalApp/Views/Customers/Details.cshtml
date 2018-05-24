@@ -1,0 +1,19 @@
+﻿@model MovieRentalApp.Models.Customer
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+<hr />
+<ul>
+    <li><b>Membership Type: &nbsp&nbsp&nbsp</b>@Model.MembershipType.Name</li>
+    @if (Model.Birthday.HasValue)
+    {
+        <li><b>@Html.LabelFor(m => m.Birthday):&nbsp&nbsp&nbsp</b>@Model.Birthday.Value.ToShortDateString()</li>
+    }
+
+</ul>
+
+@Html.ActionLink("Edit", "Edit", new { id = Model.Id})
+

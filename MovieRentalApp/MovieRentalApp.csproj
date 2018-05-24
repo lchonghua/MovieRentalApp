@@ -196,16 +196,101 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805221717273_initialModels.cs" />
+    <Compile Include="Migrations\201805221717273_initialModels.Designer.cs">
+      <DependentUpon>201805221717273_initialModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221719183_populateMembershipTypeTable.cs" />
+    <Compile Include="Migrations\201805221719183_populateMembershipTypeTable.Designer.cs">
+      <DependentUpon>201805221719183_populateMembershipTypeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221726500_addNameFieldToMembershipType.cs" />
+    <Compile Include="Migrations\201805221726500_addNameFieldToMembershipType.Designer.cs">
+      <DependentUpon>201805221726500_addNameFieldToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221730252_populateNameFieldInMembershipType.cs" />
+    <Compile Include="Migrations\201805221730252_populateNameFieldInMembershipType.Designer.cs">
+      <DependentUpon>201805221730252_populateNameFieldInMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221900096_test.cs" />
+    <Compile Include="Migrations\201805221900096_test.Designer.cs">
+      <DependentUpon>201805221900096_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221902371_populateNameOfMembershipType.cs" />
+    <Compile Include="Migrations\201805221902371_populateNameOfMembershipType.Designer.cs">
+      <DependentUpon>201805221902371_populateNameOfMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221905568_addBdayFieldToCustomer.cs" />
+    <Compile Include="Migrations\201805221905568_addBdayFieldToCustomer.Designer.cs">
+      <DependentUpon>201805221905568_addBdayFieldToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221907028_ChangeBdayToNullable.cs" />
+    <Compile Include="Migrations\201805221907028_ChangeBdayToNullable.Designer.cs">
+      <DependentUpon>201805221907028_ChangeBdayToNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221912092_setDefaultBdayToNUll.cs" />
+    <Compile Include="Migrations\201805221912092_setDefaultBdayToNUll.Designer.cs">
+      <DependentUpon>201805221912092_setDefaultBdayToNUll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805222001244_createGenreTable.cs" />
+    <Compile Include="Migrations\201805222001244_createGenreTable.Designer.cs">
+      <DependentUpon>201805222001244_createGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805222004448_createGenresTable.cs" />
+    <Compile Include="Migrations\201805222004448_createGenresTable.Designer.cs">
+      <DependentUpon>201805222004448_createGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805222006066_populateGenres.cs" />
+    <Compile Include="Migrations\201805222006066_populateGenres.Designer.cs">
+      <DependentUpon>201805222006066_populateGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805222020452_addGenreFieldsInMovie.cs" />
+    <Compile Include="Migrations\201805222020452_addGenreFieldsInMovie.Designer.cs">
+      <DependentUpon>201805222020452_addGenreFieldsInMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805230355101_addReleaseDateFieldToMovie.cs" />
+    <Compile Include="Migrations\201805230355101_addReleaseDateFieldToMovie.Designer.cs">
+      <DependentUpon>201805230355101_addReleaseDateFieldToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805230410336_addDateAddedFieldInMovie.cs" />
+    <Compile Include="Migrations\201805230410336_addDateAddedFieldInMovie.Designer.cs">
+      <DependentUpon>201805230410336_addDateAddedFieldInMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805230417048_addNumberInStockFieldInMovies.cs" />
+    <Compile Include="Migrations\201805230417048_addNumberInStockFieldInMovies.Designer.cs">
+      <DependentUpon>201805230417048_addNumberInStockFieldInMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805240420373_changeForeignKeyAssignmentInCustomers.cs" />
+    <Compile Include="Migrations\201805240420373_changeForeignKeyAssignmentInCustomers.Designer.cs">
+      <DependentUpon>201805240420373_changeForeignKeyAssignmentInCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805241500037_addFKConstraintInMovieModel.cs" />
+    <Compile Include="Migrations\201805241500037_addFKConstraintInMovieModel.Designer.cs">
+      <DependentUpon>201805241500037_addFKConstraintInMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805241531116_changeGenreIdVariableInMovieModel.cs" />
+    <Compile Include="Migrations\201805241531116_changeGenreIdVariableInMovieModel.Designer.cs">
+      <DependentUpon>201805241531116_changeGenreIdVariableInMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -266,6 +351,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -282,6 +374,65 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805221717273_initialModels.resx">
+      <DependentUpon>201805221717273_initialModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221719183_populateMembershipTypeTable.resx">
+      <DependentUpon>201805221719183_populateMembershipTypeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221726500_addNameFieldToMembershipType.resx">
+      <DependentUpon>201805221726500_addNameFieldToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221730252_populateNameFieldInMembershipType.resx">
+      <DependentUpon>201805221730252_populateNameFieldInMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221900096_test.resx">
+      <DependentUpon>201805221900096_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221902371_populateNameOfMembershipType.resx">
+      <DependentUpon>201805221902371_populateNameOfMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221905568_addBdayFieldToCustomer.resx">
+      <DependentUpon>201805221905568_addBdayFieldToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221907028_ChangeBdayToNullable.resx">
+      <DependentUpon>201805221907028_ChangeBdayToNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221912092_setDefaultBdayToNUll.resx">
+      <DependentUpon>201805221912092_setDefaultBdayToNUll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805222001244_createGenreTable.resx">
+      <DependentUpon>201805222001244_createGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805222004448_createGenresTable.resx">
+      <DependentUpon>201805222004448_createGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805222006066_populateGenres.resx">
+      <DependentUpon>201805222006066_populateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805222020452_addGenreFieldsInMovie.resx">
+      <DependentUpon>201805222020452_addGenreFieldsInMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805230355101_addReleaseDateFieldToMovie.resx">
+      <DependentUpon>201805230355101_addReleaseDateFieldToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805230410336_addDateAddedFieldInMovie.resx">
+      <DependentUpon>201805230410336_addDateAddedFieldInMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805230417048_addNumberInStockFieldInMovies.resx">
+      <DependentUpon>201805230417048_addNumberInStockFieldInMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805240420373_changeForeignKeyAssignmentInCustomers.resx">
+      <DependentUpon>201805240420373_changeForeignKeyAssignmentInCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805241500037_addFKConstraintInMovieModel.resx">
+      <DependentUpon>201805241500037_addFKConstraintInMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805241531116_changeGenreIdVariableInMovieModel.resx">
+      <DependentUpon>201805241531116_changeGenreIdVariableInMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
