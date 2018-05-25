@@ -219,10 +219,6 @@
     <Compile Include="Migrations\201805221730252_populateNameFieldInMembershipType.Designer.cs">
       <DependentUpon>201805221730252_populateNameFieldInMembershipType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201805221900096_test.cs" />
-    <Compile Include="Migrations\201805221900096_test.Designer.cs">
-      <DependentUpon>201805221900096_test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201805221902371_populateNameOfMembershipType.cs" />
     <Compile Include="Migrations\201805221902371_populateNameOfMembershipType.Designer.cs">
       <DependentUpon>201805221902371_populateNameOfMembershipType.cs</DependentUpon>
@@ -392,9 +388,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805221730252_populateNameFieldInMembershipType.resx">
       <DependentUpon>201805221730252_populateNameFieldInMembershipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201805221900096_test.resx">
-      <DependentUpon>201805221900096_test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805221902371_populateNameOfMembershipType.resx">
       <DependentUpon>201805221902371_populateNameOfMembershipType.cs</DependentUpon>

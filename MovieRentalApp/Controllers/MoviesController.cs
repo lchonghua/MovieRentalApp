@@ -53,7 +53,6 @@ namespace MovieRentalApp.Controllers
             MovieFormViewModel vm = new MovieFormViewModel
             {
                 Genres = genres,
-                Movie = new Movie()//this will create the Movie object with id set to 0 instead of null; otherwise validation would fail in Save action
             };
 
             return View("MovieForm",vm);
@@ -64,9 +63,8 @@ namespace MovieRentalApp.Controllers
         {
             if (!ModelState.IsValid)
             {
-                var vm = new MovieFormViewModel()
+                var vm = new MovieFormViewModel(movie)
                 {
-                    Movie = movie,
                     Genres = _context.Genres.ToList()
                 };
 
@@ -99,9 +97,8 @@ namespace MovieRentalApp.Controllers
             var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
             if (movie == null)
                 return HttpNotFound();
-            var vm = new MovieFormViewModel()
-            {
-                Movie = movie,
+            var vm = new MovieFormViewModel(movie)
+            {                
                 Genres = _context.Genres.ToList()
             };
 
