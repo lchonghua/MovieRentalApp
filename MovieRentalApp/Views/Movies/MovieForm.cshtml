@@ -46,6 +46,13 @@
     @* set a hidden value for Date Added: current date *@
     @Html.HiddenFor(m => m.Movie.DateAdded)
     @Html.HiddenFor(m => m.Movie.Id)
+
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
 }
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+    }
 

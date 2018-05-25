@@ -15,7 +15,7 @@ namespace MovieRentalApp.Models
         [StringLength(255)]
         public string Name { get; set; }
 
-        [ForeignKey("GenreId")]
+        [ForeignKey("GenreId")]       
         public Genre Genre { get; set; }
 
         [Display(Name = "Released Date")]
@@ -25,8 +25,10 @@ namespace MovieRentalApp.Models
         public DateTime DateAdded { get; set; }
 
         [Display(Name = "Number In Stock")]
+        [Range(1,50)]
         public int NumberInStock { get; set; }
 
+        [Required(ErrorMessage = "The Genre field is required")]
         public int GenreId { get; set; }
     }
 }
