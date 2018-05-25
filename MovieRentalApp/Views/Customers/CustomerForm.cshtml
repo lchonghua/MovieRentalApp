@@ -65,6 +65,12 @@
     @* set customer id as hidden field *@
     @Html.HiddenFor(m => m.Customer.Id)
 
+    @* Add Anti-Forgery-Token to prevent malicious usage 
+        - It generates a hidden field, _RequestVerificationToken, in this form;
+        - it also stored as a cookie in user's computer in encryptic format
+        - to check it, go to the Browser's Application tab -> cookies -> localhost
+        *@
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
 }
 

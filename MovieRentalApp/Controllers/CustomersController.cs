@@ -51,6 +51,7 @@ namespace MovieRentalApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         //data binding. ASP can extract Customer model out of CustomerFormViewModel sent from the CustomerForm view
         public ActionResult Save(Customer customer) //you can also pass in a 'UpdateCustomerDto' object - partial Customer object that contains the properties to be updated (data transfer object)
         {
