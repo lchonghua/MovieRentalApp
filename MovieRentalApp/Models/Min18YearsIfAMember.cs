@@ -9,7 +9,7 @@ namespace MovieRentalApp.Models
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             var customer = (Customer)validationContext.ObjectInstance;
-            if (customer.MembershipTypeId == 0||customer.MembershipTypeId == 1)
+            if (customer.MembershipTypeId == MembershipType.Unknown|customer.MembershipTypeId == MembershipType.PayAsYouGo)
                 return ValidationResult.Success;
             else
             {
