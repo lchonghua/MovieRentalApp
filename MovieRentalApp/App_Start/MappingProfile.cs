@@ -14,7 +14,7 @@ namespace MovieRentalApp.App_Start
         {
             //automapper is a convention based mapping tool: the mapping is based on the property names in the two objects
             Mapper.CreateMap<Customer, CustomerDto>();
-            Mapper.CreateMap<CutomerDto, Customer>();
+            Mapper.CreateMap<CustomerDto, Customer>();
         }
     }
 }
