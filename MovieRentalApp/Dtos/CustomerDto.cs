@@ -7,7 +7,7 @@ using System.Web;
 
 namespace MovieRentalApp.Dtos
 {
-    public class Customer
+    public class CustomerDto
     {
         // copy the properties from Customer model
         // modify the properties: they should be either primitive types or custom DTOs
