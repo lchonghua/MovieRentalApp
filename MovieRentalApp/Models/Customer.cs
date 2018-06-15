@@ -24,7 +24,7 @@ namespace MovieRentalApp.Models
         [Display(Name = "Membership Type")]
         public int MembershipTypeId { get; set; }//name this property by convention, so that EF would recognize it and treat it as a foreign key to MembershipType table
 
-        [Min18YearsIfAMember] //customized validation: if the customer select something other than Pay As You Go, then this customer must be > 18yrs
+        //[Min18YearsIfAMember] //customized validation: if the customer select something other than Pay As You Go, then this customer must be > 18yrs
         [Display(Name = "Date of Birth")]
         public DateTime? Birthday { get; set; } = null;
         
