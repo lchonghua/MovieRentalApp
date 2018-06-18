@@ -44,17 +44,19 @@ else
         $(document).ready(function () {
             $("#customers .js-delete").on("click", function () {
                 var button = $(this);
-                if (confirm("Are you sure you want to delete this customer?")) {
-                    $.ajax({
-                        url: "/api/customers/" + button.attr("data-customer-id"),
-                        method: "DELETE",
-                        success: function () {
-                            button.parent("tr").remove(); @* this is a callback function, and the meaning of 'this' is different from the above 'this'.
-                                                              so we need defined a button variable first *@
-                            location.reload(true);
-                        }
-                    });
-                }
+                bootbox.confirm("Are you sure you want to delete this customer?", function () {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/customers/" + button.attr("data-customer-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parent("tr").remove(); @* this is a callback function, and the meaning of 'this' is different from the above 'this'.
+                                so we need defined a button variable first *@
+                                location.reload(true);
+                            }
+                        });
+                    }
+                });
             });
         });
     </script>
