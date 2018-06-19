@@ -24,10 +24,10 @@ namespace MovieRentalApp.Controllers
 
 
         // GET: Customers
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-            return View(customers);
+            //no need to retrieve data here, b/c we get the data from the ajax call in datatable in index page
+            return View();
         }
 
         public ActionResult Details(int id)
