@@ -22,7 +22,7 @@
 {
     <script>
         $(document).ready(function ()  {
-            $("#customers").DataTable({
+            var table = $("#customers").DataTable({
                 ajax: {
                     url: "/api/customers",
                     dataSrc: ""
@@ -53,14 +53,15 @@
             $("#customers").on("click", ".js-delete", function () {
                 var button = $(this);
 
-                bootbox.confirm("Are you sure you want to delete this customer?", function () {
+                bootbox.confirm("Are you sure you want to delete this customer?", function (result) {
                     if (result) {
                         $.ajax({
                             url: "/api/customers/" + button.attr("data-customer-id"),
                             method: "DELETE",
                             success: function () {
-                                button.parent("tr").remove(); @* this is a callback function, and the meaning of 'this' is different from the above 'this'.
-                                so we need defined a button variable first *@
+                                @* we need to remove the deleted customer from the internal list of customer data table,
+                                    and ask data table to redraw itself*@      
+                                table.row(button.parents("tr")).remove().draw();                         
                                 location.reload(true);
                             }
                         });
