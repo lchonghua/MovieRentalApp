@@ -20,7 +20,7 @@ namespace MovieRentalApp.Dtos
         public bool IsSubscribedToNewsletter { get; set; }
 
         
-        //public MembershipType MembershipType { get; set; }  exclude MembershipType, b/c this is a domain class, so it creates a dependency of this DTO to a domain model
+        public MembershipTypeDto MembershipType { get; set; }
 
         public int MembershipTypeId { get; set; }
 

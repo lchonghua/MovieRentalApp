@@ -11,7 +11,7 @@ using AutoMapper;
 using MovieRentalApp.Dtos;
 using MovieRentalApp.Models;
 using System;
-using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -31,7 +31,10 @@ namespace MovieRentalApp.Controllers.Api
         //GET /api/customers
         public IHttpActionResult GetCustomers()
         {
-            var customerDto = _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);//use delegate
+            var customerDto = _context.Customers
+                .Include(c => c.MembershipType)
+                .ToList()
+                .Select(Mapper.Map<Customer, CustomerDto>);//use delegate
             return Ok(customerDto);
         }
 
