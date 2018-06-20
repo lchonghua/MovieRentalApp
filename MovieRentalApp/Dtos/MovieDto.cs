@@ -21,5 +21,7 @@ namespace MovieRentalApp.Dtos
 
         [Required(ErrorMessage = "The Genre field is required")]
         public int GenreId { get; set; }
+
+        public GenreDto Genre { get; set; }
     }
 }
